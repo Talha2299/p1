@@ -12,6 +12,7 @@ FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 #COPY ["PartnerPortal.csproj", "/"
 COPY . .
+COPY *.config ./
 #RUN ls
 #RUN dotnet nuget add source "https://pkgs.dev.azure.com/rmscloud/RMS/_packaging/RMS/nuget/v3/index.json" --name "RMS" --username "mwu@rms.com.au" --password "ajh3gzzi7h5qpaxmkrf3gfom6pm4rerbbollorullgrvndpt2ogq" --store-password-in-clear-text
 RUN dotnet restore "PartnerPortal.csproj" --configfile "./nuget.config"
