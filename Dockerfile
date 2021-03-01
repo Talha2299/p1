@@ -15,7 +15,7 @@ COPY . .
 COPY *.config ./
 #RUN ls
 #RUN dotnet nuget add source "https://pkgs.dev.azure.com/rmscloud/RMS/_packaging/RMS/nuget/v3/index.json" --name "RMS" --username "mwu@rms.com.au" --password "ajh3gzzi7h5qpaxmkrf3gfom6pm4rerbbollorullgrvndpt2ogq" --store-password-in-clear-text
-RUN dotnet restore "PartnerPortal.csproj" --configfile "./nuget.config"
+#RUN dotnet restore "PartnerPortal.csproj" --configfile "./nuget.config"
 #COPY . .
 #COPY Libs Libs
 #WORKDIR "/src/PartnerPortalCore"
